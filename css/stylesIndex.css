@@ -1,5 +1,57 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(235, 235, 235);
+}
+/*
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+*/
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.mes {
+    text-align: center;
+    border-radius: 20px;
+    /*border: 2px solid black;*/
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(228, 243, 255);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.mes:hover {
+    background-color: rgb(159, 209, 250);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+}
+
+.numeroNotas {
+    padding: 10px;
+}
+
+/*ENFATIZADO*/
+.on {
+    background-color: lightyellow;
+}
+
+.on:hover {
+    background-color: rgb(255, 255, 136);
 }
