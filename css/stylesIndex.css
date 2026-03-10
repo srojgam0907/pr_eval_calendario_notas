@@ -102,3 +102,76 @@ h1 {
 .on:hover {
     background-color: rgb(255, 255, 136);
 }
+
+#listaGlobal {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#listaGlobal h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.contenedorNotas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.nota {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nota:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #3498db;
+}
+
+.header-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.etiqueta-mes {
+    background-color: #3498db;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nota h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.nota p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
