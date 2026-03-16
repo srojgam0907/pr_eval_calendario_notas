@@ -90,3 +90,44 @@ input, textarea {
     margin: 0;
     color: #7f8c8d;
 }
+
+#mensajeError {
+    color: #e74c3c;
+    font-weight: bold;
+    height: 20px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+    gap: 10px;
+}
+
+.btnEditar {
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: lightyellow;
+}
+
+.btnEditar:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: 0.2s;
+    background-color: rgb(255, 255, 83);
+}
+
+.btnBorrar {
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: lightsalmon;
+}
+
+.btnBorrar:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: 0.2s;
+    background-color: rgb(255, 109, 52);
+}
