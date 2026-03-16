@@ -1,19 +1,13 @@
 const btnListar= document.querySelector("#btn-listar");
 const btnLimpiar= document.querySelector("#btn-limpiar");
-const meses= document.querySelector(".mes");
+const meses= document.querySelectorAll(".mes");
 const listaGlobal= document.querySelector("#listaGlobal");
 
 //FUNCIONES
 
 function obtenerNotas() {
     const notas= localStorage.getItem('calendarioNotas');
-    
-    if(notas) {
-        return JSON.parse(notas);
-
-    } else {
-        return [];
-    }
+    return notas ? JSON.parse(notas) : [];
 }
 
 function contadorNotas() {
@@ -26,14 +20,15 @@ function contadorNotas() {
         const contador= notasMes.length;
         
         const numNotas= mesActual.querySelector('.numeroNotas');
-        numNotas.textContent= `${contador} notas`;
 
         if(contador > 0) {
+            numNotas.textContent= `${contador}`;
             mesActual.classList.add('on');
-
         } else {
+            numNotas.textContent = "";
             mesActual.classList.remove('on');
         }
+
     }
 }
 
@@ -44,6 +39,7 @@ btnLimpiar.addEventListener("click", () => {
     if(confirm("¿Seguro de que quieres borrar todas las notas?")) {
         localStorage.removeItem('calendarioNotas');
         contadorNotas(); //actualiza los contadores
+        listaGlobal.innerHTML = "";
     }
 });
 
@@ -84,3 +80,5 @@ btnListar.addEventListener("click", () => {
 
     listaGlobal.appendChild(contenedorNotas);
 });
+
+contadorNotas();
